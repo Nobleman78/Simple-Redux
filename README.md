@@ -11,9 +11,9 @@
    const ADD_PRODUCT = "ADD_PRODUCT"
 2. Initial State
    ```js
-const products_initial_state = {
-    products: ['mango', 'litchi'],
-    numberOfProducts: 2
+     const products_initial_state = {
+     products: ['mango', 'litchi'],
+     numberOfProducts: 2
 }
 
 5. Call Action
@@ -49,6 +49,7 @@ const addProduct = (product) => {
             return state;
     }
 }
+
 9. Create store 
 ```js
     const store = createStore(productsReducer,applyMiddleware(logger))  
