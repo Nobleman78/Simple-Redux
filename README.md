@@ -11,49 +11,53 @@
    const ADD_PRODUCT = "ADD_PRODUCT"
 2. Initial State
    ```js
-     const products_initial_state = {
-     products: ['mango', 'litchi'],
-     numberOfProducts: 2
+   const products_initial_state = {
+   products: ['mango', 'litchi'],
+   numberOfProducts: 2
 }
 
 5. Call Action
-      ```js
+   ```js
    const getProducts = () => {
    return {
-        type: GET_PRODUCTS
+   type: GET_PRODUCTS
     }
 }
-```js
-const addProduct = (product) => {
-    return {
-        type: ADD_PRODUCT,
-        payload: product
+   const addProduct = (product) => {
+   return {
+   type: ADD_PRODUCT,
+   payload: product
 
     }
 }
+   
+
+
 
 7. Make Reducer
-      ```js
-   const productsReducer = (state = products_initial_state, action) => {
-   switch (action.type) {
-        case GET_PRODUCTS:
-            return {
-                ...state
-            }
-        case ADD_PRODUCT:
-            return {
-                products: [...state.products, action.payload],
-                numberOfProducts: state.numberOfProducts + 1
-            }
-        default:
-            return state;
-    }
+  ```js
+  const productsReducer = (state = products_initial_state, action) => {
+  switch (action.type) {
+  case GET_PRODUCTS:
+  return {
+   ...state
+  }
+  case ADD_PRODUCT:
+  return {
+  products: [...state.products, action.payload],
+  numberOfProducts: state.numberOfProducts + 1
+  }
+  default:
+  return state;
+  }
 }
+
 
 9. Create store 
 ```js
-    const store = createStore(productsReducer,applyMiddleware(logger))  
-    store.subscribe(() => {
-    console.log(store.getState())
+const store = createStore(productsReducer,applyMiddleware(logger))  
+store.subscribe(() => {
+console.log(store.getState())
 })
+ 
  
