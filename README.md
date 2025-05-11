@@ -1,17 +1,18 @@
 # Simple Redux
 # Library Should Be Install
-  1. npm i redux-thunk
-  2. npm i redux-logger
+  1. npm i redux-thunk  
+  2. npm i redux-logger  
   3. npm i redux
      
 # Redux Steps
-1. Define constant
+1. Define constant  
+   ```js
    const GET_PRODUCTS = "GET_PRODUCTS"
    const ADD_PRODUCT = "ADD_PRODUCT"
-3. Define initial state
-   const products_initial_state = {
-   products: ['mango', 'litchi'],
-   numberOfProducts: 2
+2. Initial State
+const products_initial_state = {
+    products: ['mango', 'litchi'],
+    numberOfProducts: 2
 }
 
 5. Call Action
