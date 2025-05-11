@@ -10,12 +10,14 @@
    const GET_PRODUCTS = "GET_PRODUCTS"
    const ADD_PRODUCT = "ADD_PRODUCT"
 2. Initial State
+   ```js
 const products_initial_state = {
     products: ['mango', 'litchi'],
     numberOfProducts: 2
 }
 
 5. Call Action
+      ```js
    const getProducts = () => {
    return {
         type: GET_PRODUCTS
@@ -30,6 +32,7 @@ const addProduct = (product) => {
 }
 
 7. Make Reducer
+      ```js
    const productsReducer = (state = products_initial_state, action) => {
    switch (action.type) {
         case GET_PRODUCTS:
@@ -45,7 +48,8 @@ const addProduct = (product) => {
             return state;
     }
 }
-9. Create store
+9. Create store 
+```js
     const store = createStore(productsReducer,applyMiddleware(logger))  
     store.subscribe(() => {
     console.log(store.getState())
