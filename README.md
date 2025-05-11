@@ -23,6 +23,7 @@ const products_initial_state = {
         type: GET_PRODUCTS
     }
 }
+```js
 const addProduct = (product) => {
     return {
         type: ADD_PRODUCT,
@@ -54,7 +55,4 @@ const addProduct = (product) => {
     store.subscribe(() => {
     console.log(store.getState())
 })
-   # Three Steps
-   1. getstate()
-   2. dispatch()
-   3. subscribe()
+ 
